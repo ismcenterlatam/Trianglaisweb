@@ -26,8 +26,6 @@ const Seo: React.FC<SeoProps> = ({ title, description, path }) => {
   const currentPath = getPathForLang(language, path as PathKey);
   const canonicalUrl = `${siteUrl}${currentPath}`;
   
-  const ogImageUrl = `${siteUrl}/assets/Logo1.png`;
-
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -40,7 +38,6 @@ const Seo: React.FC<SeoProps> = ({ title, description, path }) => {
         "@type": "Organization",
         "name": "TRIANGLAIS",
         "url": siteUrl,
-        "logo": `${siteUrl}/assets/Logo1.png`,
         "sameAs": [
           // Add social media links here when available
         ]
@@ -77,14 +74,12 @@ const Seo: React.FC<SeoProps> = ({ title, description, path }) => {
             <meta property="og:url" content={canonicalUrl} />
             <meta property="og:site_name" content="TRIANGLAIS" />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content={ogImageUrl} />
             <meta property="og:locale" content={language} />
 
             {/* Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:card" content="summary" />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={ogImageUrl} />
 
             {/* Structured Data */}
             <script type="application/ld+json">

@@ -40,7 +40,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
                 {t.about.paragraph2}
               </p>
               <button onClick={() => navigate('contact')} className="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-md text-lg hover:bg-opacity-80 transition-all duration-300 shadow-md">
-                {t.about.cta}
+                {t.nav.contact}
               </button>
             </div>
           </div>

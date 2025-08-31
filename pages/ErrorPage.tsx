@@ -1,13 +1,37 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Seo from '../components/Seo';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { ExclamationTriangleIcon, ShieldExclamationIcon, ServerIcon } from '../constants/icons';
+import { 
+  ExclamationTriangleIcon, 
+  ShieldExclamationIcon, 
+  ServerIcon,
+  ClockIcon,
+  LinkIcon,
+  ScaleIcon,
+  DocumentIcon,
+  LockClosedIcon,
+} from '../constants/icons';
 import type { Page } from '../App';
 
+type StatusCode = 400 | 401 | 402 | 403 | 404 | 405 | 406 | 407 | 408 | 409 | 410 | 411 | 412 | 413 | 414 | 415 | 416 | 417 | 422 | 423 | 424 | 500;
+
 interface ErrorPageProps {
-  statusCode: 404 | 403 | 500;
+  statusCode: StatusCode;
   navigate: (page: Page) => void;
 }
+
+const iconMap: { [key in StatusCode]?: React.FC<{className?: string}> } = {
+  401: ShieldExclamationIcon,
+  403: ShieldExclamationIcon,
+  407: ShieldExclamationIcon,
+  408: ClockIcon,
+  410: LinkIcon,
+  413: ScaleIcon,
+  415: DocumentIcon,
+  423: LockClosedIcon,
+  500: ServerIcon,
+};
+
 
 const ErrorPage: React.FC<ErrorPageProps> = ({ statusCode, navigate }) => {
   const { t } = useContext(LanguageContext);
@@ -29,30 +53,24 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ statusCode, navigate }) => {
   }, [navigate]);
 
   const getErrorDetails = () => {
-    switch (statusCode) {
-      case 403:
-        return {
-          content: t.error403,
-          seo: t.seo.error403,
-          path: 'error403' as const,
-          Icon: ShieldExclamationIcon,
-        };
-      case 500:
-        return {
-          content: t.error500,
-          seo: t.seo.error500,
-          path: 'error500' as const,
-          Icon: ServerIcon,
-        };
-      case 404:
-      default:
-        return {
-          content: t.notFound,
-          seo: t.seo.notFound,
-          path: 'notFound' as const,
-          Icon: ExclamationTriangleIcon,
-        };
-    }
+    const errorKey = `error${statusCode}` as keyof typeof t.errors;
+    const seoKey = `error${statusCode}` as keyof typeof t.seo;
+
+    // Default to a generic error if the specific one isn't found, though it should be.
+    // FIX: Cast content to the correct object type.
+    // TypeScript infers a union type for t.errors properties, but we know error keys point to objects, not strings.
+    const content = (t.errors[errorKey] || t.errors['error404']) as { title: string; message: string; };
+    const seo = t.seo[seoKey] || t.seo.error404;
+    
+    // Determine the icon
+    const Icon = iconMap[statusCode] || ExclamationTriangleIcon;
+
+    return {
+      content,
+      seo,
+      path: errorKey,
+      Icon
+    };
   };
 
   const { content, seo, path, Icon } = getErrorDetails();
@@ -83,10 +101,10 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ statusCode, navigate }) => {
               onClick={() => navigate('home')}
               className="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-md text-lg transition-all duration-300 shadow-lg transform hover:scale-105 hover:shadow-glow"
             >
-              {content.buttonText}
+              {t.errors.buttonText}
             </button>
             <p className="text-brand-slate mt-8">
-              {content.redirectText} <span className="font-bold text-brand-light">{countdown}</span>s...
+              {t.errors.redirectText} <span className="font-bold text-brand-light">{countdown}</span>s...
             </p>
           </div>
         </div>

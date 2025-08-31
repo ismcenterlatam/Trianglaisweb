@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import { GlobeIcon, ChevronDownIcon } from '../constants/icons';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
@@ -12,6 +12,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const { language, setLanguage, t } = useContext(LanguageContext);
+  const langMenuRef = useRef<HTMLDivElement>(null);
 
   const navLinks: { name: keyof typeof t.nav; page: Page }[] = [
     { name: 'home', page: 'home' },
@@ -31,12 +32,25 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
     setIsLangMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [langMenuRef]);
+
+
   return (
     <header className="bg-brand-dark/80 backdrop-blur-md sticky top-0 z-50 border-b border-brand-slate/20">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <button onClick={() => navigate('home')} className="cursor-pointer">
-            <img src="assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-10 w-auto" />
+          <button onClick={() => navigate('home')} className="text-2xl font-bold text-brand-light hover:text-brand-accent transition-colors duration-300">
+            TRIANGLAIS
           </button>
 
           {/* Desktop Nav */}
@@ -53,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
               </button>
             ))}
             {/* Language Selector */}
-            <div className="relative">
+            <div className="relative" ref={langMenuRef}>
               <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-brand-light hover:text-brand-accent transition-colors duration-300">
                 <GlobeIcon className="h-5 w-5 mr-1" />
                 <span>{language.toUpperCase()}</span>

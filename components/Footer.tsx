@@ -3,7 +3,6 @@ import { FacebookIcon, TwitterIcon, InstagramIcon } from '../constants/icons';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
 
-
 interface FooterProps {
   navigate: (page: Page) => void;
 }
@@ -17,8 +16,8 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="md:col-span-1">
-            <button onClick={() => navigate('home')} className="inline-block mb-4">
-               <img src="assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-12 w-auto" />
+            <button onClick={() => navigate('home')} className="inline-block mb-4 text-2xl font-bold text-brand-light hover:text-brand-accent transition-colors duration-300">
+               TRIANGLAIS
             </button>
             <p className="text-brand-slate">{t.footer.tagline}</p>
             <div className="flex space-x-4 mt-6">
@@ -42,10 +41,9 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div>
             <h4 className="font-bold text-white mb-4">{t.footer.legal.title}</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-brand-accent cursor-pointer">{t.footer.legal.privacy}</a></li>
-              <li><a href="#" className="hover:text-brand-accent cursor-pointer">{t.footer.legal.terms}</a></li>
-              <li><button onClick={() => navigate('error403')} className="hover:text-brand-accent">{t.footer.legal.simulate403}</button></li>
-              <li><button onClick={() => navigate('error500')} className="hover:text-brand-accent">{t.footer.legal.simulate500}</button></li>
+              <li><button onClick={() => navigate('privacy')} className="hover:text-brand-accent">{t.footer.legal.privacy}</button></li>
+              <li><button onClick={() => navigate('terms')} className="hover:text-brand-accent">{t.footer.legal.terms}</button></li>
+              <li><button onClick={() => navigate('cookies')} className="hover:text-brand-accent">{t.footer.legal.cookies}</button></li>
             </ul>
           </div>
 
