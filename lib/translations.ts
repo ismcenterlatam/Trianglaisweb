@@ -1,5 +1,11 @@
 export const translations = {
   es: {
+    paths: {
+      home: '',
+      about: 'quienes-somos',
+      method: 'metodo',
+      contact: 'contacto',
+    },
     nav: {
       home: 'Inicio',
       about: 'Quiénes Somos',
@@ -90,8 +96,32 @@ export const translations = {
       },
       copyright: 'Academia de Idiomas TRIANGLAIS. Todos los Derechos Reservados.',
     },
+    seo: {
+      home: {
+        title: 'TRIANGLAIS | Academia de Idiomas Online - Aprende Inglés, Francés, Español',
+        description: 'Aprende inglés, francés y español con tutores expertos en TRIANGLAIS. Cursos online, horarios flexibles y un método de aprendizaje inmersivo. ¡Comienza tu prueba gratis!'
+      },
+      about: {
+        title: 'Quiénes Somos | Misión y Equipo de TRIANGLAIS',
+        description: 'Descubre la misión de TRIANGLAIS, tu academia de idiomas. Conectamos culturas a través de la enseñanza práctica y un equipo de educadores apasionados.'
+      },
+      method: {
+        title: 'Método de Aprendizaje | La Metodología TRIANGLAIS',
+        description: 'Conoce nuestro método de aprendizaje de idiomas en 3 pasos: inmersión personalizada, práctica conversacional y aplicación en el mundo real. ¡Alcanza la fluidez!'
+      },
+      contact: {
+        title: 'Contacto | Habla con la Academia de Idiomas TRIANGLAIS',
+        description: '¿Tienes preguntas sobre nuestros cursos de inglés, francés o español? Contacta al equipo de TRIANGLAIS y comienza tu viaje hacia la fluidez hoy mismo.'
+      }
+    }
   },
   en: {
+    paths: {
+      home: 'en',
+      about: 'en/about-us',
+      method: 'en/method',
+      contact: 'en/contact',
+    },
     nav: {
       home: 'Home',
       about: 'About Us',
@@ -182,8 +212,32 @@ export const translations = {
       },
       copyright: 'TRIANGLAIS Language Academy. All Rights Reserved.',
     },
+    seo: {
+      home: {
+        title: 'TRIANGLAIS | Online Language Academy - Learn English, French, Spanish',
+        description: 'Learn English, French, and Spanish with expert tutors at TRIANGLAIS. Online courses, flexible schedules, and an immersive learning method. Start your free trial!'
+      },
+      about: {
+        title: 'About Us | Mission and Team at TRIANGLAIS',
+        description: 'Discover the mission of TRIANGLAIS, your language academy. We connect cultures through practical teaching and a team of passionate educators.'
+      },
+      method: {
+        title: 'Learning Method | The TRIANGLAIS Methodology',
+        description: 'Learn about our 3-step language learning method: personalized immersion, conversational practice, and real-world application. Achieve fluency!'
+      },
+      contact: {
+        title: 'Contact | Speak with TRIANGLAIS Language Academy',
+        description: 'Have questions about our English, French, or Spanish courses? Contact the TRIANGLAIS team and start your journey to fluency today.'
+      }
+    }
   },
   fr: {
+    paths: {
+      home: 'fr',
+      about: 'fr/a-propos',
+      method: 'fr/methode',
+      contact: 'fr/contact',
+    },
     nav: {
       home: 'Accueil',
       about: 'À Propos',
@@ -274,6 +328,24 @@ export const translations = {
       },
       copyright: 'Académie de Langues TRIANGLAIS. Tous Droits Réservés.',
     },
+    seo: {
+      home: {
+        title: 'TRIANGLAIS | Académie de Langues en Ligne - Apprenez l\'Anglais, le Français, l\'Espagnol',
+        description: 'Apprenez l\'anglais, le français et l\'espagnol avec des tuteurs experts chez TRIANGLAIS. Cours en ligne, horaires flexibles et méthode d\'apprentissage immersive. Commencez votre essai gratuit !'
+      },
+      about: {
+        title: 'À Propos | Mission et Équipe de TRIANGLAIS',
+        description: 'Découvrez la mission de TRIANGLAIS, votre académie de langues. Nous connectons les cultures grâce à un enseignement pratique et une équipe d\'éducateurs passionnés.'
+      },
+      method: {
+        title: 'Méthode d\'Apprentissage | La Méthodologie TRIANGLAIS',
+        description: 'Découvrez notre méthode d\'apprentissage des langues en 3 étapes : immersion personnalisée, pratique de la conversation et application dans le monde réel. Atteignez la fluidité !'
+      },
+      contact: {
+        title: 'Contact | Parlez avec l\'Académie de Langues TRIANGLAIS',
+        description: 'Vous avez des questions sur nos cours d\'anglais, de français ou d\'espagnol ? Contactez l\'équipe de TRIANGLAIS et commencez votre voyage vers la fluidité dès aujourd\'hui.'
+      }
+    }
   },
 };
 

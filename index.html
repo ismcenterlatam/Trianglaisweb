@@ -21,17 +21,39 @@
               'brand-light': '#E6F1FF',   // Lightest Slate / Almost White
               'brand-slate': '#8892B0',   // Lighter Slate
               'brand-accent': '#64FFDA',  // Bright Mint/Teal
-            }
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            boxShadow: {
+              glow: '0 0 15px 0 rgba(100, 255, 218, 0.3)',
+            },
           }
         }
       }
     </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1"
   }
 }
 </script>

@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home navigate={navigate} />;
       case 'about':
         return <AboutPage />;
       case 'method':
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       case 'contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <Home navigate={navigate} />;
     }
   };
 

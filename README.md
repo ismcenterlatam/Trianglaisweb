@@ -19,8 +19,9 @@ Este proyecto emplea un stack tecnológico moderno para garantizar el rendimient
 ### Frontend
 - **Framework**: React (v18+) - Construido como una SPA (Single Page Application) con enrutamiento simulado.
 - **Lenguaje**: TypeScript - Para una seguridad de tipos robusta y una mejor calidad del código.
-- **Estilos**: Tailwind CSS - Un framework de CSS "utility-first" para un desarrollo de interfaz de usuario rápido y consistente.
+- **Estilos**: Tailwind CSS - Un framework de CSS "utility-first" para un desarrollo de interfaz de usuario rápido y consistente, cargado vía CDN.
 - **Gestión de Estado**: React Context API - Para gestionar el estado global del idioma y la navegación.
+- **SEO**: Gestión centralizada de metaetiquetas (título, descripción, canónicas, hreflang) y datos estructurados (JSON-LD) para un rendimiento de búsqueda multilingüe óptimo.
 - **Componentes de UI**: Componentes reutilizables construidos con React y TypeScript.
 
 ### Backend
@@ -45,18 +46,22 @@ El proyecto sigue una estructura lógica y escalable:
 
 ```
 /
-├── public/
-│   └── index.html
-├── components/         # Componentes de UI reutilizables (Header, Footer, etc.)
+├── assets/             # Imágenes, videos y otros recursos estáticos
+│   ├── team-photo.svg
+│   └── learning-process.svg
+├── components/         # Componentes de UI reutilizables (Header, Seo, Hero, etc.)
+├── constants/          # Iconos SVG y otras constantes
 ├── contexts/           # Gestores de estado global (LanguageContext)
 ├── lib/                # Lógica de negocio y datos (translations)
 ├── pages/              # Componentes que representan una página completa
 │   ├── Home.tsx
-│   ├── About.tsx
+│   ├── AboutPage.tsx
 │   ├── Method.tsx
 │   └── Contact.tsx
 ├── App.tsx             # Componente principal y enrutador
-├── index.tsx           # Punto de entrada de la aplicación
+├── index.html          # Archivo HTML de entrada principal
+├── index.tsx           # Punto de entrada de la aplicación React
+├── metadata.json       # Metadatos de la aplicación
 └── README.md           # Este archivo
 ```
 
@@ -73,22 +78,24 @@ Este modelo de desarrollo asistido por IA nos permite centrarnos más en la lóg
 
 ## 6. Cómo Empezar
 
+Este proyecto es una aplicación frontend pura que no requiere un proceso de compilación ni instalación de dependencias de `npm`. Puede ser servido directamente desde cualquier servidor web estático.
+
 Para ejecutar este proyecto localmente, sigue estos pasos:
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone <url-del-repositorio>
-    cd <directorio-del-proyecto>
-    ```
+1.  **Asegúrate de tener todos los archivos del proyecto en un directorio.**
 
-2.  **Instala las dependencias:**
-    ```bash
-    npm install
-    ```
+2.  **Inicia un servidor web local.** Una de las formas más sencillas de hacerlo es con Python. Abre tu terminal en el directorio del proyecto y ejecuta uno de los siguientes comandos (dependiendo de tu versión de Python):
 
-3.  **Ejecuta el servidor de desarrollo:**
-    ```bash
-    npm run start
-    ```
+    *   **Python 3.x:**
+        ```bash
+        python -m http.server 8000
+        ```
 
-Esto iniciará la aplicación en `http://localhost:3000` (u otro puerto disponible).
+    *   **Python 2.x:**
+        ```bash
+        python -m SimpleHTTPServer 8000
+        ```
+
+3.  **Abre tu navegador** y visita `http://localhost:8000`.
+
+Alternativamente, puedes usar extensiones como "Live Server" en Visual Studio Code para servir el `index.html` directamente.
