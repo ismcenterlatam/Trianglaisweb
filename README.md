@@ -14,6 +14,17 @@ Los objetivos clave son:
 
 ## 2. Stack Tecnológico y Arquitectura
 
+<p align="center">
+  <a href="https://react.dev/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" alt="Django" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://moodle.org/" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Moodle-logo.svg" alt="Moodle" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://almalinux.org/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/almalinux/almalinux-original.svg" alt="AlmaLinux" width="60" height="60" style="margin: 10px;"/></a>
+  <a href="https://httpd.apache.org/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" alt="Apache" width="60" height="60" style="margin: 10px;"/></a>
+</p>
+
 Este proyecto emplea un stack tecnológico moderno para garantizar el rendimiento, la escalabilidad y una excelente experiencia para el desarrollador.
 
 ### Frontend
@@ -66,6 +77,12 @@ El proyecto sigue una estructura lógica y escalable:
 ```
 
 ## 5. Desarrollo con Gemini AI
+
+<p align="center">
+  <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Gemini AI" width="150">
+  </a>
+</p>
 
 Una parte significativa de la estructura, los componentes, la lógica de internacionalización y el código de este proyecto fue generada y refactorizada utilizando la IA Gemini de Google. Este enfoque aceleró el proceso de desarrollo al:
 - Estructurar rápidamente el proyecto React + TypeScript.
