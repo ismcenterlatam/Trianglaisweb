@@ -26,7 +26,7 @@ const Seo: React.FC<SeoProps> = ({ title, description, path }) => {
   const currentPath = getPathForLang(language, path as PathKey);
   const canonicalUrl = `${siteUrl}${currentPath}`;
   
-  const ogImageUrl = `${siteUrl}/og-image.png`; // A generic OG image
+  const ogImageUrl = `${siteUrl}/assets/Logo1.png`;
 
   useEffect(() => {
     document.title = title;
@@ -40,7 +40,7 @@ const Seo: React.FC<SeoProps> = ({ title, description, path }) => {
         "@type": "Organization",
         "name": "TRIANGLAIS",
         "url": siteUrl,
-        "logo": `${siteUrl}/logo.png`,
+        "logo": `${siteUrl}/assets/Logo1.png`,
         "sameAs": [
           // Add social media links here when available
         ]

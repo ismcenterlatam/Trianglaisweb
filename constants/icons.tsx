@@ -5,12 +5,6 @@ interface IconProps {
   className?: string;
 }
 
-export const LanguageIcon: React.FC<IconProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
-  </svg>
-);
-
 export const UserGroupIcon: React.FC<IconProps> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.25 0m-5.25 0a3.75 3.75 0 00-5.25 0M3 13.249a9.087 9.087 0 012.25l-2.25 2.25a9.087 9.087 0 002.25 2.25M18 14.25a9.09 9.09 0 00-3.742-.479 3 3 0 00-4.682 2.72M13.5 18.75v-2.25a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H3.75m9.75 9.75H13.5" />
@@ -25,7 +19,7 @@ export const ClockIcon: React.FC<IconProps> = (props) => (
 
 export const ChatBubbleBottomCenterTextIcon: React.FC<IconProps> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 12.75H6m12 0h-12m12 0V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v6.75m14.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V12.75m12 0v3.375a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25V6.75" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 12.75H6m12 0h-12m12 0V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v6.75m14.25 0v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V12.75m12 0v3.375a2.25 2.25 0 01-2.25-2.25H6.75a2.25 2.25 0 01-2.25-2.25V6.75" />
     </svg>
 );
 

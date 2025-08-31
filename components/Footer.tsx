@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LanguageIcon, FacebookIcon, TwitterIcon, InstagramIcon } from '../constants/icons';
+import { FacebookIcon, TwitterIcon, InstagramIcon } from '../constants/icons';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
 
@@ -17,10 +17,9 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="md:col-span-1">
-            <a onClick={() => navigate('home')} className="flex items-center space-x-2 text-2xl font-bold text-white mb-4 cursor-pointer">
-              <LanguageIcon className="h-8 w-8 text-brand-accent" />
-              <span>TRIANGLAIS</span>
-            </a>
+            <button onClick={() => navigate('home')} className="inline-block mb-4">
+               <img src="/assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-12 w-auto" />
+            </button>
             <p className="text-brand-slate">{t.footer.tagline}</p>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-brand-slate hover:text-brand-accent"><FacebookIcon className="h-6 w-6" /></a>
@@ -33,9 +32,9 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div>
             <h4 className="font-bold text-white mb-4">{t.footer.quickLinks.title}</h4>
             <ul className="space-y-2">
-              <li><a onClick={() => navigate('about')} className="hover:text-brand-accent cursor-pointer">{t.footer.quickLinks.about}</a></li>
-              <li><a onClick={() => navigate('method')} className="hover:text-brand-accent cursor-pointer">{t.footer.quickLinks.method}</a></li>
-              <li><a onClick={() => navigate('contact')} className="hover:text-brand-accent cursor-pointer">{t.footer.quickLinks.contact}</a></li>
+              <li><button onClick={() => navigate('about')} className="hover:text-brand-accent">{t.footer.quickLinks.about}</button></li>
+              <li><button onClick={() => navigate('method')} className="hover:text-brand-accent">{t.footer.quickLinks.method}</button></li>
+              <li><button onClick={() => navigate('contact')} className="hover:text-brand-accent">{t.footer.quickLinks.contact}</button></li>
             </ul>
           </div>
 

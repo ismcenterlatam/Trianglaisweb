@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo } from 'react';
+import React, { createContext, useState, useMemo, useEffect } from 'react';
 import { translations, Translation } from '../lib/translations';
 
 type Language = 'es' | 'en' | 'fr';
@@ -22,14 +22,15 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('es');
 
-  const value = useMemo(() => {
+  useEffect(() => {
     document.documentElement.lang = language;
-    return {
-        language,
-        setLanguage,
-        t: translations[language],
-    }
   }, [language]);
+
+  const value = useMemo(() => ({
+    language,
+    setLanguage,
+    t: translations[language],
+  }), [language]);
 
   return (
     <LanguageContext.Provider value={value}>

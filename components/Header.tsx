@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { LanguageIcon, GlobeIcon, ChevronDownIcon } from '../constants/icons';
+import { GlobeIcon, ChevronDownIcon } from '../constants/icons';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
 
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
     { name: 'contact', page: 'contact' },
   ];
   
-  const languages = [
+  const languages: { code: 'es' | 'en' | 'fr'; label: string }[] = [
       { code: 'es', label: 'Español (ES)' },
       { code: 'en', label: 'English (EN)' },
       { code: 'fr', label: 'Français (FR)' },
@@ -33,25 +33,24 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
 
   return (
     <header className="bg-brand-dark/80 backdrop-blur-md sticky top-0 z-50 border-b border-brand-slate/20">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <a onClick={() => navigate('home')} className="flex items-center space-x-2 text-2xl font-bold text-brand-light cursor-pointer">
-            <LanguageIcon className="h-8 w-8 text-brand-accent" />
-            <span>TRIANGLAIS</span>
-          </a>
+          <button onClick={() => navigate('home')} className="cursor-pointer">
+            <img src="/assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-10 w-auto" />
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
                 onClick={() => navigate(link.page)}
-                className={`font-medium cursor-pointer transition-colors duration-300 ${
+                className={`font-medium transition-colors duration-300 ${
                   currentPage === link.page ? 'text-brand-accent' : 'text-brand-light hover:text-brand-accent'
                 }`}
               >
                 {t.nav[link.name]}
-              </a>
+              </button>
             ))}
             {/* Language Selector */}
             <div className="relative">
@@ -63,17 +62,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
               {isLangMenuOpen && (
                  <div className="absolute right-0 mt-2 py-2 w-36 bg-[#122849] rounded-md shadow-xl z-20">
                     {languages.map(lang => (
-                         <a
+                         <button
                             key={lang.code}
-                            href="#"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleLangChange(lang.code as 'es' | 'en' | 'fr');
-                            }}
-                            className="block px-4 py-2 text-sm text-brand-light hover:bg-brand-dark hover:text-brand-accent"
+                            onClick={() => handleLangChange(lang.code)}
+                            className="block w-full text-left px-4 py-2 text-sm text-brand-light hover:bg-brand-dark hover:text-brand-accent"
                          >
                             {lang.label}
-                         </a>
+                         </button>
                     ))}
                  </div>
               )}
@@ -95,18 +90,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
           <div className="md:hidden mt-4">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                 <a
+                 <button
                  key={link.name}
                  onClick={() => {
                     navigate(link.page);
                     setIsMenuOpen(false);
                  }}
-                 className={`font-medium cursor-pointer transition-colors duration-300 py-2 text-center rounded-md ${
+                 className={`font-medium transition-colors duration-300 py-2 text-center rounded-md ${
                    currentPage === link.page ? 'text-brand-accent bg-brand-slate/10' : 'text-brand-light hover:text-brand-accent hover:bg-brand-slate/10'
                  }`}
                >
                  {t.nav[link.name]}
-               </a>
+               </button>
               ))}
             </nav>
           </div>

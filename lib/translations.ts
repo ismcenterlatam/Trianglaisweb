@@ -36,6 +36,28 @@ export const translations = {
         },
       },
     },
+    courses: {
+      title: 'Nuestros Cursos de Idiomas',
+      subtitle: 'Desde principiante hasta avanzado, tenemos un curso para ti.',
+      english: {
+        title: 'Inglés Global',
+        level: 'Todos los niveles',
+        description: 'Domina el idioma internacional de los negocios y los viajes con nuestros atractivos cursos de inglés.',
+        cta: 'Más Información'
+      },
+      spanish: {
+        title: 'Español Conversacional',
+        level: 'Todos los niveles',
+        description: 'Sumérgete en la rica cultura hispana aprendiendo a hablar español con confianza y fluidez.',
+        cta: 'Más Información'
+      },
+      french: {
+        title: 'Francés Elegante',
+        level: 'Todos los niveles',
+        description: 'Descubre la belleza del francés, el idioma del amor, la diplomacia y el arte, con nuestros tutores expertos.',
+        cta: 'Más Información'
+      }
+    },
     about: {
       title: 'Sobre Nosotros',
       tagline: 'Conectando Culturas, Una Conversación a la Vez.',
@@ -152,6 +174,28 @@ export const translations = {
         },
       },
     },
+    courses: {
+      title: 'Our Language Courses',
+      subtitle: 'From beginner to advanced, we have a course for you.',
+      english: {
+        title: 'Global English',
+        level: 'All Levels',
+        description: 'Master the international language of business and travel with our engaging English courses.',
+        cta: 'Learn More'
+      },
+      spanish: {
+        title: 'Conversational Spanish',
+        level: 'All Levels',
+        description: 'Immerse yourself in the rich Hispanic culture by learning to speak Spanish with confidence and fluency.',
+        cta: 'Learn More'
+      },
+      french: {
+        title: 'Elegant French',
+        level: 'All Levels',
+        description: 'Discover the beauty of French, the language of love, diplomacy, and art, with our expert tutors.',
+        cta: 'Learn More'
+      }
+    },
     about: {
       title: 'About Us',
       tagline: 'Connecting Cultures, One Conversation at a Time.',
@@ -267,6 +311,28 @@ export const translations = {
           description: 'Participez à des leçons dynamiques basées sur la conversation qui rendent l\'apprentissage amusant et efficace.',
         },
       },
+    },
+    courses: {
+      title: 'Nos Cours de Langues',
+      subtitle: 'Du débutant à l\'avancé, nous avons un cours pour vous.',
+      english: {
+        title: 'Anglais Global',
+        level: 'Tous les niveaux',
+        description: 'Maîtrisez la langue internationale des affaires et des voyages avec nos cours d\'anglais captivants.',
+        cta: 'En Savoir Plus'
+      },
+      spanish: {
+        title: 'Espagnol Conversationnel',
+        level: 'Tous les niveaux',
+        description: 'Plongez dans la riche culture hispanique en apprenant à parler espagnol avec confiance et fluidité.',
+        cta: 'En Savoir Plus'
+      },
+      french: {
+        title: 'Français Élégant',
+        level: 'Tous les niveaux',
+        description: 'Découvrez la beauté du français, la langue de l\'amour, de la diplomatie et de l\'art, avec nos tuteurs experts.',
+        cta: 'En Savoir Plus'
+      }
     },
     about: {
       title: 'À Propos de Nous',

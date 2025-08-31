@@ -22,7 +22,7 @@ const App: React.FC = () => {
       case 'home':
         return <Home navigate={navigate} />;
       case 'about':
-        return <AboutPage />;
+        return <AboutPage navigate={navigate} />;
       case 'method':
         return <Method />;
       case 'contact':

@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import Seo from '../components/Seo';
+import type { Page } from '../App';
 
-const AboutPage: React.FC = () => {
+interface AboutPageProps {
+  navigate: (page: Page) => void;
+}
+
+const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
     const { t } = useContext(LanguageContext);
 
   return (
@@ -34,9 +39,9 @@ const AboutPage: React.FC = () => {
               <p className="text-brand-slate text-lg mb-8 leading-relaxed">
                 {t.about.paragraph2}
               </p>
-              <a href="#" className="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-md text-lg hover:bg-opacity-80 transition-all duration-300 shadow-md">
+              <button onClick={() => navigate('contact')} className="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-md text-lg hover:bg-opacity-80 transition-all duration-300 shadow-md">
                 {t.about.cta}
-              </a>
+              </button>
             </div>
           </div>
         </div>
