@@ -13,7 +13,7 @@ import {
 } from '../constants/icons';
 import type { Page } from '../App';
 
-type StatusCode = 400 | 401 | 402 | 403 | 404 | 405 | 406 | 407 | 408 | 409 | 410 | 411 | 412 | 413 | 414 | 415 | 416 | 417 | 422 | 423 | 424 | 500;
+type StatusCode = 400 | 401 | 402 | 403 | 404 | 405 | 406 | 407 | 408 | 409 | 410 | 411 | 412 | 413 | 414 | 415 | 416 | 417 | 422 | 423 | 424 | 500 | 501 | 502 | 503 | 504 | 505 | 506 | 507 | 510;
 
 interface ErrorPageProps {
   statusCode: StatusCode;
@@ -30,6 +30,14 @@ const iconMap: { [key in StatusCode]?: React.FC<{className?: string}> } = {
   415: DocumentIcon,
   423: LockClosedIcon,
   500: ServerIcon,
+  501: ServerIcon,
+  502: ServerIcon,
+  503: ServerIcon,
+  504: ClockIcon,
+  505: ServerIcon,
+  506: ServerIcon,
+  507: ServerIcon,
+  510: ServerIcon,
 };
 
 

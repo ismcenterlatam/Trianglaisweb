@@ -18,7 +18,8 @@ export type Page =
   'error406' | 'error407' | 'error408' | 'error409' | 'error410' | 'error411' |
   'error412' | 'error413' | 'error414' | 'error415' | 'error416' | 'error417' |
   'error422' | 'error423' | 'error424' |
-  'error500';
+  'error500' | 'error501' | 'error502' | 'error503' | 'error504' | 'error505' |
+  'error506' | 'error507' | 'error510';
 
 const AppContent: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -58,6 +59,14 @@ const AppContent: React.FC = () => {
       case 'error423': return <ErrorPage statusCode={423} navigate={navigate} />;
       case 'error424': return <ErrorPage statusCode={424} navigate={navigate} />;
       case 'error500': return <ErrorPage statusCode={500} navigate={navigate} />;
+      case 'error501': return <ErrorPage statusCode={501} navigate={navigate} />;
+      case 'error502': return <ErrorPage statusCode={502} navigate={navigate} />;
+      case 'error503': return <ErrorPage statusCode={503} navigate={navigate} />;
+      case 'error504': return <ErrorPage statusCode={504} navigate={navigate} />;
+      case 'error505': return <ErrorPage statusCode={505} navigate={navigate} />;
+      case 'error506': return <ErrorPage statusCode={506} navigate={navigate} />;
+      case 'error507': return <ErrorPage statusCode={507} navigate={navigate} />;
+      case 'error510': return <ErrorPage statusCode={510} navigate={navigate} />;
       default: return <ErrorPage statusCode={404} navigate={navigate} />;
     }
   };

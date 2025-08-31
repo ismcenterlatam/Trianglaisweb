@@ -13,7 +13,9 @@ export const translations = {
       error405: '405', error406: '406', error407: '407', error408: '408', error409: '409',
       error410: '410', error411: '411', error412: '412', error413: '413', error414: '414',
       error415: '415', error416: '416', error417: '417', error422: '422', error423: '423',
-      error424: '424', error500: '500'
+      error424: '424',
+      error500: '500', error501: '501', error502: '502', error503: '503', error504: '504',
+      error505: '505', error506: '506', error507: '507', error510: '510'
     },
     nav: {
       home: 'Inicio',
@@ -207,6 +209,14 @@ export const translations = {
       'error423': { title: 'Recurso Bloqueado', message: 'El recurso al que intentas acceder está actualmente bloqueado.' },
       'error424': { title: 'Dependencia Fallida', message: 'La solicitud falló porque dependía de otra solicitud que también falló.' },
       'error500': { title: 'Error Interno del Servidor', message: 'Estamos experimentando problemas técnicos. Nuestro equipo ha sido notificado y está trabajando para solucionarlo.' },
+      'error501': { title: 'No Implementado', message: 'La funcionalidad que solicitaste no está implementada en el servidor.' },
+      'error502': { title: 'Puerta de Enlace Incorrecta', message: 'Recibimos una respuesta inválida de un servidor ascendente mientras intentábamos procesar tu solicitud.' },
+      'error503': { title: 'Servicio No Disponible', message: 'Nuestro servidor está actualmente sobrecargado o en mantenimiento. Por favor, inténtalo de nuevo en unos momentos.' },
+      'error504': { title: 'Tiempo de Espera Agotado en la Puerta de Enlace', message: 'No obtuvimos una respuesta a tiempo de un servidor ascendente. Por favor, intenta de nuevo más tarde.' },
+      'error505': { title: 'Versión HTTP No Soportada', message: 'El servidor no soporta la versión del protocolo HTTP utilizada en tu solicitud.' },
+      'error506': { title: 'Variante También Negocia', message: 'Ha ocurrido un error de configuración interna en el servidor que impide completar tu solicitud.' },
+      'error507': { title: 'Almacenamiento Insuficiente', message: 'El servidor no tiene suficiente espacio de almacenamiento para completar tu solicitud.' },
+      'error510': { title: 'No Extendido', message: 'Se requieren extensiones adicionales a la solicitud para que el servidor pueda cumplirla.' },
       'redirectText': 'Serás redirigido a la página de inicio en',
       'buttonText': 'Volver al Inicio',
     },
@@ -260,7 +270,15 @@ export const translations = {
       error422: { title: '422 Entidad No Procesable | TRIANGLAIS', description: 'Error 422: La solicitud contiene errores semánticos y no puede ser procesada por TRIANGLAIS.' },
       error423: { title: '423 Recurso Bloqueado | TRIANGLAIS', description: 'Error 423: El recurso solicitado está bloqueado en TRIANGLAIS.' },
       error424: { title: '424 Dependencia Fallida | TRIANGLAIS', description: 'Error 424: La solicitud falló debido a una dependencia fallida en TRIANGLAIS.' },
-      error500: { title: '500 Error del Servidor | Problema técnico en TRIANGLAIS', description: 'Estamos experimentando problemas técnicos en la Academia de Idiomas TRIANGLAIS. Estamos trabajando para solucionarlo.' }
+      error500: { title: '500 Error del Servidor | Problema técnico en TRIANGLAIS', description: 'Estamos experimentando problemas técnicos en la Academia de Idiomas TRIANGLAIS. Estamos trabajando para solucionarlo.' },
+      error501: { title: '501 No Implementado | TRIANGLAIS', description: 'Error 501: La funcionalidad solicitada no está implementada en el servidor de TRIANGLAIS.' },
+      error502: { title: '502 Puerta de Enlace Incorrecta | TRIANGLAIS', description: 'Error 502: El servidor de TRIANGLAIS recibió una respuesta inválida de un servidor ascendente.' },
+      error503: { title: '503 Servicio No Disponible | TRIANGLAIS', description: 'Error 503: El servidor de TRIANGLAIS no está disponible actualmente. Inténtalo de nuevo más tarde.' },
+      error504: { title: '504 Tiempo de Espera Agotado | TRIANGLAIS', description: 'Error 504: El servidor de TRIANGLAIS no recibió una respuesta a tiempo de un servidor ascendente.' },
+      error505: { title: '505 Versión HTTP No Soportada | TRIANGLAIS', description: 'Error 505: El servidor de TRIANGLAIS no soporta la versión del protocolo HTTP solicitada.' },
+      error506: { title: '506 Variante También Negocia | TRIANGLAIS', description: 'Error 506: Se ha producido un error de configuración interna en el servidor de TRIANGLAIS.' },
+      error507: { title: '507 Almacenamiento Insuficiente | TRIANGLAIS', description: 'Error 507: El servidor de TRIANGLAIS no tiene suficiente almacenamiento para completar la solicitud.' },
+      error510: { title: '510 No Extendido | TRIANGLAIS', description: 'Error 510: Se requieren extensiones adicionales para que el servidor de TRIANGLAIS pueda procesar la solicitud.' }
     }
   },
   en: {
@@ -277,7 +295,9 @@ export const translations = {
       error405: 'en/405', error406: 'en/406', error407: 'en/407', error408: 'en/408', error409: 'en/409',
       error410: 'en/410', error411: 'en/411', error412: 'en/412', error413: 'en/413', error414: 'en/414',
       error415: 'en/415', error416: 'en/416', error417: 'en/417', error422: 'en/422', error423: 'en/423',
-      error424: 'en/424', error500: 'en/500'
+      error424: 'en/424',
+      error500: 'en/500', error501: 'en/501', error502: 'en/502', error503: 'en/503', error504: 'en/504',
+      error505: 'en/505', error506: 'en/506', error507: 'en/507', error510: 'en/510'
     },
     nav: {
       home: 'Home',
@@ -471,6 +491,14 @@ export const translations = {
       'error423': { title: 'Locked', message: 'The resource you are trying to access is currently locked.' },
       'error424': { title: 'Failed Dependency', message: 'The request failed because it depended on another request that also failed.' },
       'error500': { title: 'Internal Server Error', message: 'We are experiencing technical difficulties. Our team has been notified and is working on a fix.' },
+      'error501': { title: 'Not Implemented', message: 'The functionality you requested is not implemented on the server.' },
+      'error502': { title: 'Bad Gateway', message: 'We received an invalid response from an upstream server while trying to process your request.' },
+      'error503': { title: 'Service Unavailable', message: 'Our server is currently overloaded or down for maintenance. Please try again in a few moments.' },
+      'error504': { title: 'Gateway Timeout', message: 'We did not get a timely response from an upstream server. Please try again later.' },
+      'error505': { title: 'HTTP Version Not Supported', message: 'The server does not support the HTTP protocol version used in your request.' },
+      'error506': { title: 'Variant Also Negotiates', message: 'An internal server configuration error has occurred that prevents your request from being completed.' },
+      'error507': { title: 'Insufficient Storage', message: 'The server does not have enough storage space to complete your request.' },
+      'error510': { title: 'Not Extended', message: 'Further extensions to the request are required for the server to fulfill it.' },
       'redirectText': 'You will be redirected to the homepage in',
       'buttonText': 'Back to Home',
     },
@@ -524,7 +552,15 @@ export const translations = {
       error422: { title: '422 Unprocessable Entity | TRIANGLAIS', description: 'Error 422: The request contains semantic errors and cannot be processed by TRIANGLAIS.' },
       error423: { title: '423 Locked | TRIANGLAIS', description: 'Error 423: The requested resource is locked at TRIANGLAIS.' },
       error424: { title: '424 Failed Dependency | TRIANGLAIS', description: 'Error 424: The request failed due to a failed dependency at TRIANGLAIS.' },
-      error500: { title: '500 Server Error | Technical issue at TRIANGLAIS', description: 'We are experiencing technical issues at TRIANGLAIS Language Academy. We are working to resolve it.' }
+      error500: { title: '500 Server Error | Technical issue at TRIANGLAIS', description: 'We are experiencing technical issues at TRIANGLAIS Language Academy. We are working to resolve it.' },
+      error501: { title: '501 Not Implemented | TRIANGLAIS', description: 'Error 501: The requested functionality is not implemented on the TRIANGLAIS server.' },
+      error502: { title: '502 Bad Gateway | TRIANGLAIS', description: 'Error 502: The TRIANGLAIS server received an invalid response from an upstream server.' },
+      error503: { title: '503 Service Unavailable | TRIANGLAIS', description: 'Error 503: The TRIANGLAIS server is currently unavailable. Please try again later.' },
+      error504: { title: '504 Gateway Timeout | TRIANGLAIS', description: 'Error 504: The TRIANGLAIS server did not receive a timely response from an upstream server.' },
+      error505: { title: '505 HTTP Version Not Supported | TRIANGLAIS', description: 'Error 505: The TRIANGLAIS server does not support the requested HTTP protocol version.' },
+      error506: { title: '506 Variant Also Negotiates | TRIANGLAIS', description: 'Error 506: An internal configuration error has occurred on the TRIANGLAIS server.' },
+      error507: { title: '507 Insufficient Storage | TRIANGLAIS', description: 'Error 507: The TRIANGLAIS server has insufficient storage to complete the request.' },
+      error510: { title: '510 Not Extended | TRIANGLAIS', description: 'Error 510: Further extensions are required for the TRIANGLAIS server to process the request.' }
     }
   },
   fr: {
@@ -541,7 +577,9 @@ export const translations = {
       error405: 'fr/405', error406: 'fr/406', error407: 'fr/407', error408: 'fr/408', error409: 'fr/409',
       error410: 'fr/410', error411: 'fr/411', error412: 'fr/412', error413: 'fr/413', error414: 'fr/414',
       error415: 'fr/415', error416: 'fr/416', error417: 'fr/417', error422: 'fr/422', error423: 'fr/423',
-      error424: 'fr/424', error500: 'fr/500'
+      error424: 'fr/424',
+      error500: 'fr/500', error501: 'fr/501', error502: 'fr/502', error503: 'fr/503', error504: 'fr/504',
+      error505: 'fr/505', error506: 'fr/506', error507: 'fr/507', error510: 'fr/510'
     },
     nav: {
       home: 'Accueil',
@@ -735,6 +773,14 @@ export const translations = {
       'error423': { title: 'Ressource Verrouillée', message: 'La ressource à laquelle vous essayez d\'accéder est actuellement verrouillée.' },
       'error424': { title: 'Dépendance Échouée', message: 'La requête a échoué car elle dépendait d\'une autre requête qui a également échoué.' },
       'error500': { title: 'Erreur Interne du Serveur', message: 'Nous rencontrons des problèmes techniques. Notre équipe a été notifiée et travaille à la résolution du problème.' },
+      'error501': { title: 'Non Implémenté', message: 'La fonctionnalité que vous avez demandée n\'est pas implémentée sur le serveur.' },
+      'error502': { title: 'Mauvaise Passerelle', message: 'Nous avons reçu une réponse invalide d\'un serveur en amont en essayant de traiter votre demande.' },
+      'error503': { title: 'Service Indisponible', message: 'Notre serveur est actuellement surchargé ou en maintenance. Veuillez réessayer dans quelques instants.' },
+      'error504': { title: 'Délai d\'Attente de la Passerelle Écoulé', message: 'Nous n\'avons pas reçu de réponse à temps d\'un serveur en amont. Veuillez réessayer plus tard.' },
+      'error505': { title: 'Version HTTP Non Supportée', message: 'Le serveur ne supporte pas la version du protocole HTTP utilisée dans votre requête.' },
+      'error506': { title: 'La Variante Négocie Aussi', message: 'Une erreur de configuration interne du serveur s\'est produite, empêchant l\'exécution de votre requête.' },
+      'error507': { title: 'Stockage Insuffisant', message: 'Le serveur ne dispose pas de suffisamment d\'espace de stockage pour compléter votre demande.' },
+      'error510': { title: 'Non Étendu', message: 'Des extensions supplémentaires à la requête sont nécessaires pour que le serveur puisse la satisfaire.' },
       'redirectText': 'Vous serez redirigé vers la page d\'accueil dans',
       'buttonText': 'Retour à l\'accueil',
     },
@@ -788,7 +834,15 @@ export const translations = {
       error422: { title: '422 Entité Non Traitable | TRIANGLAIS', description: 'Erreur 422: La requête contient des erreurs sémantiques et ne peut pas être traitée par TRIANGLAIS.' },
       error423: { title: '423 Ressource Verrouillée | TRIANGLAIS', description: 'Erreur 423: La ressource demandée est verrouillée sur TRIANGLAIS.' },
       error424: { title: '424 Dépendance Échouée | TRIANGLAIS', description: 'Erreur 424: La requête a échoué en raison d\'une dépendance échouée sur TRIANGLAIS.' },
-      error500: { title: '500 Erreur Serveur | Problème technique sur TRIANGLAIS', description: 'Nous rencontrons des problèmes techniques sur l\'Académie de Langues TRIANGLAIS. Nous travaillons à sa résolution.' }
+      error500: { title: '500 Erreur Serveur | Problème technique sur TRIANGLAIS', description: 'Nous rencontrons des problèmes techniques sur l\'Académie de Langues TRIANGLAIS. Nous travaillons à sa résolution.' },
+      error501: { title: '501 Non Implémenté | TRIANGLAIS', description: 'Erreur 501: La fonctionnalité demandée n\'est pas implémentée sur le serveur de TRIANGLAIS.' },
+      error502: { title: '502 Mauvaise Passerelle | TRIANGLAIS', description: 'Erreur 502: Le serveur de TRIANGLAIS a reçu une réponse invalide d\'un serveur en amont.' },
+      error503: { title: '503 Service Indisponible | TRIANGLAIS', description: 'Erreur 503: Le serveur de TRIANGLAIS est actuellement indisponible. Veuillez réessayer plus tard.' },
+      error504: { title: '504 Délai d\'Attente Écoulé | TRIANGLAIS', description: 'Erreur 504: Le serveur de TRIANGLAIS n\'a pas reçu de réponse à temps d\'un serveur en amont.' },
+      error505: { title: '505 Version HTTP Non Supportée | TRIANGLAIS', description: 'Erreur 505: Le serveur de TRIANGLAIS ne prend pas en charge la version du protocole HTTP demandée.' },
+      error506: { title: '506 La Variante Négocie Aussi | TRIANGLAIS', description: 'Erreur 506: Une erreur de configuration interne s\'est produite sur le serveur de TRIANGLAIS.' },
+      error507: { title: '507 Stockage Insuffisant | TRIANGLAIS', description: 'Erreur 507: Le serveur de TRIANGLAIS ne dispose pas de suffisamment de stockage pour traiter la requête.' },
+      error510: { title: '510 Non Étendu | TRIANGLAIS', description: 'Erreur 510: Des extensions supplémentaires sont nécessaires pour que le serveur de TRIANGLAIS puisse traiter la requête.' }
     }
   },
 };
