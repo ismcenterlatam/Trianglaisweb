@@ -2,6 +2,7 @@ import React, { useState, useContext, useRef, useEffect } from 'react';
 import { GlobeIcon, ChevronDownIcon } from '../constants/icons';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
+import LoginModal from './LoginModal';
 
 interface HeaderProps {
   currentPage: Page;
@@ -11,6 +12,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { language, setLanguage, t } = useContext(LanguageContext);
   const langMenuRef = useRef<HTMLDivElement>(null);
 
@@ -46,82 +48,100 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
 
 
   return (
-    <header className="bg-brand-dark/80 backdrop-blur-md sticky top-0 z-50 border-b border-brand-slate/20">
-      <div className="container mx-auto px-6 py-3">
-        <div className="flex items-center justify-between">
-          <button onClick={() => navigate('home')} className="text-2xl font-bold text-brand-light hover:text-brand-accent transition-colors duration-300">
-            TRIANGLAIS
-          </button>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => navigate(link.page)}
-                className={`font-medium transition-colors duration-300 ${
-                  currentPage === link.page ? 'text-brand-accent' : 'text-brand-light hover:text-brand-accent'
-                }`}
-              >
-                {t.nav[link.name]}
-              </button>
-            ))}
-            {/* Language Selector */}
-            <div className="relative" ref={langMenuRef}>
-              <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-brand-light hover:text-brand-accent transition-colors duration-300">
-                <GlobeIcon className="h-5 w-5 mr-1" />
-                <span>{language.toUpperCase()}</span>
-                <ChevronDownIcon className={`h-4 w-4 ml-1 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {isLangMenuOpen && (
-                 <div className="absolute right-0 mt-2 py-2 w-36 bg-[#122849] rounded-md shadow-xl z-20">
-                    {languages.map(lang => (
-                         <button
-                            key={lang.code}
-                            onClick={() => handleLangChange(lang.code)}
-                            className="block w-full text-left px-4 py-2 text-sm text-brand-light hover:bg-brand-dark hover:text-brand-accent"
-                         >
-                            {lang.label}
-                         </button>
-                    ))}
-                 </div>
-              )}
-            </div>
-          </nav>
-          
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-brand-light hover:text-brand-accent focus:outline-none">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-              </svg>
+    <>
+      <header className="bg-brand-dark/80 backdrop-blur-md sticky top-0 z-40 border-b border-brand-slate/20">
+        <div className="container mx-auto px-6 py-3">
+          <div className="flex items-center justify-between">
+            <button onClick={() => navigate('home')} className="text-2xl font-bold text-brand-light hover:text-brand-accent transition-colors duration-300">
+              TRIANGLAIS
             </button>
-          </div>
-        </div>
 
-        {/* Mobile Nav */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4">
-            <nav className="flex flex-col space-y-4">
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
-                 <button
-                 key={link.name}
-                 onClick={() => {
-                    navigate(link.page);
-                    setIsMenuOpen(false);
-                 }}
-                 className={`font-medium transition-colors duration-300 py-2 text-center rounded-md ${
-                   currentPage === link.page ? 'text-brand-accent bg-brand-slate/10' : 'text-brand-light hover:text-brand-accent hover:bg-brand-slate/10'
-                 }`}
-               >
-                 {t.nav[link.name]}
-               </button>
+                <button
+                  key={link.name}
+                  onClick={() => navigate(link.page)}
+                  className={`font-medium transition-colors duration-300 ${
+                    currentPage === link.page ? 'text-brand-accent' : 'text-brand-light hover:text-brand-accent'
+                  }`}
+                >
+                  {t.nav[link.name]}
+                </button>
               ))}
+              <button
+                onClick={() => setIsLoginModalOpen(true)}
+                className="font-bold bg-brand-accent text-brand-dark px-5 py-2 rounded-md transition-all duration-300 shadow-md transform hover:scale-105 hover:shadow-glow"
+              >
+                {t.nav.login}
+              </button>
+              {/* Language Selector */}
+              <div className="relative" ref={langMenuRef}>
+                <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-brand-light hover:text-brand-accent transition-colors duration-300">
+                  <GlobeIcon className="h-5 w-5 mr-1" />
+                  <span>{language.toUpperCase()}</span>
+                  <ChevronDownIcon className={`h-4 w-4 ml-1 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isLangMenuOpen && (
+                  <div className="absolute right-0 mt-2 py-2 w-36 bg-[#122849] rounded-md shadow-xl z-20">
+                      {languages.map(lang => (
+                          <button
+                              key={lang.code}
+                              onClick={() => handleLangChange(lang.code)}
+                              className="block w-full text-left px-4 py-2 text-sm text-brand-light hover:bg-brand-dark hover:text-brand-accent"
+                          >
+                              {lang.label}
+                          </button>
+                      ))}
+                  </div>
+                )}
+              </div>
             </nav>
+            
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-brand-light hover:text-brand-accent focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+                </svg>
+              </button>
+            </div>
           </div>
-        )}
-      </div>
-    </header>
+
+          {/* Mobile Nav */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4">
+              <nav className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <button
+                  key={link.name}
+                  onClick={() => {
+                      navigate(link.page);
+                      setIsMenuOpen(false);
+                  }}
+                  className={`font-medium transition-colors duration-300 py-2 text-center rounded-md ${
+                    currentPage === link.page ? 'text-brand-accent bg-brand-slate/10' : 'text-brand-light hover:text-brand-accent hover:bg-brand-slate/10'
+                  }`}
+                >
+                  {t.nav[link.name]}
+                </button>
+                ))}
+                <button
+                  onClick={() => {
+                    setIsLoginModalOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full text-center font-bold bg-brand-accent text-brand-dark py-3 rounded-md transition-all duration-300 shadow-md"
+                >
+                  {t.nav.login}
+                </button>
+              </nav>
+            </div>
+          )}
+        </div>
+      </header>
+      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
+    </>
   );
 };
 

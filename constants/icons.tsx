@@ -136,3 +136,62 @@ export const LockClosedIcon: React.FC<IconProps> = (props) => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
     </svg>
 );
+
+export const XMarkIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+);
+
+export const USFlagIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 10" {...props}>
+    <defs>
+      <path id="star" d="m0-1 .22.68h.72l-.58.42.22.68-.58-.42-.58.42.22-.68-.58-.42h.72z" fill="#fff"/>
+    </defs>
+    <path fill="#B22234" d="M0 0h19v10H0z"/>
+    <path stroke="#fff" strokeWidth="1.2" d="M0 1.2h19M0 3.6h19M0 6h19M0 8.4h19"/>
+    <path fill="#3C3B6E" d="M0 0h9.5v6H0z"/>
+    <g transform="translate(4.75 3)">
+      <g id="s9">
+        <g id="s5">
+          <use href="#star" x="-3.8"/>
+          <use href="#star" x="-1.9"/>
+          <use href="#star"/>
+          <use href="#star" x="1.9"/>
+          <use href="#star" x="3.8"/>
+        </g>
+        <use href="#s5" y="1"/>
+        <use href="#s5" y="2"/>
+        <use href="#s5" y="3"/>
+        <use href="#s5" y="4"/>
+      </g>
+      <g id="s6" transform="translate(-.95 .5)">
+        <use href="#star" x="-3.8"/>
+        <use href="#star" x="-1.9"/>
+        <use href="#star"/>
+        <use href="#star" x="1.9"/>
+        <use href="#star" x="3.8"/>
+        <use href="#star" x="5.7"/>
+      </g>
+      <use href="#s6" y="1"/>
+      <use href="#s6" y="2"/>
+      <use href="#s6" y="3"/>
+    </g>
+  </svg>
+);
+
+
+export const FranceFlagIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" {...props}>
+      <path fill="#002395" d="M0 0h1v2H0z"/>
+      <path fill="#fff" d="M1 0h1v2H1z"/>
+      <path fill="#ed2939" d="M2 0h1v2H2z"/>
+    </svg>
+);
+
+export const SpainFlagIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" {...props}>
+      <path fill="#c60b1e" d="M0 0h3v2H0z"/>
+      <path fill="#ffc400" d="M0 .5h3v1H0z"/>
+    </svg>
+);
