@@ -65,7 +65,7 @@ const Method: React.FC = () => {
                         </div>
                         <div className="order-1 lg:order-2">
                             <img 
-                                src="/assets/learning-process.svg" 
+                                src="assets/learning-process.svg" 
                                 alt={t.method.title}
                                 className="rounded-lg shadow-2xl w-full h-auto object-contain"
                             />

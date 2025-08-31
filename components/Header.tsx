@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigate }) => {
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <button onClick={() => navigate('home')} className="cursor-pointer">
-            <img src="/assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-10 w-auto" />
+            <img src="assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-10 w-auto" />
           </button>
 
           {/* Desktop Nav */}

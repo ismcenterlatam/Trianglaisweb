@@ -26,7 +26,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <img 
-                src="/assets/team-photo.svg" 
+                src="assets/team-photo.svg" 
                 alt={t.about.title}
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
               />

@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Courses from '../components/Courses';
+import HowItWorks from '../components/HowItWorks';
+import Testimonials from '../components/Testimonials';
+import CtaBanner from '../components/CtaBanner';
 import Seo from '../components/Seo';
 import { LanguageContext } from '../contexts/LanguageContext';
 import type { Page } from '../App';
@@ -22,6 +25,9 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
       <Hero navigate={navigate} />
       <Features />
       <Courses />
+      <HowItWorks />
+      <Testimonials />
+      <CtaBanner navigate={navigate} />
     </>
   );
 };

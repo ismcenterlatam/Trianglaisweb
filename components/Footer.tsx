@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
           {/* Brand Info */}
           <div className="md:col-span-1">
             <button onClick={() => navigate('home')} className="inline-block mb-4">
-               <img src="/assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-12 w-auto" />
+               <img src="assets/Logo1.png" alt="TRIANGLAIS Logo" className="h-12 w-auto" />
             </button>
             <p className="text-brand-slate">{t.footer.tagline}</p>
             <div className="flex space-x-4 mt-6">

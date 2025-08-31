@@ -41,22 +41,66 @@ export const translations = {
       subtitle: 'Desde principiante hasta avanzado, tenemos un curso para ti.',
       english: {
         title: 'Inglés Global',
-        level: 'Todos los niveles',
-        description: 'Domina el idioma internacional de los negocios y los viajes con nuestros atractivos cursos de inglés.',
+        level: 'Niveles A1 - C2',
+        description: 'Domina el idioma internacional de los negocios y los viajes. Cursos enfocados en conversación, preparación de exámenes y más.',
         cta: 'Más Información'
       },
       spanish: {
         title: 'Español Conversacional',
-        level: 'Todos los niveles',
-        description: 'Sumérgete en la rica cultura hispana aprendiendo a hablar español con confianza y fluidez.',
+        level: 'Niveles A1 - C2',
+        description: 'Sumérgete en la rica cultura hispana. Aprende español para viajar, por herencia cultural o para ampliar tus horizontes.',
         cta: 'Más Información'
       },
       french: {
         title: 'Francés Elegante',
-        level: 'Todos los niveles',
-        description: 'Descubre la belleza del francés, el idioma del amor, la diplomacia y el arte, con nuestros tutores expertos.',
+        level: 'Niveles A1 - C2',
+        description: 'Descubre la belleza del francés. Cursos para diplomacia, arte o simplemente por el placer de aprender un idioma hermoso.',
         cta: 'Más Información'
       }
+    },
+    howItWorks: {
+        title: 'Empezar es Fácil',
+        subtitle: 'Tu viaje hacia la fluidez comienza en solo tres pasos.',
+        steps: [
+            {
+                name: 'Regístrate',
+                description: 'Crea tu cuenta en segundos y cuéntanos sobre tus objetivos de aprendizaje.'
+            },
+            {
+                name: 'Reserva tus Clases',
+                description: 'Elige a tu tutor ideal y reserva clases que se ajusten a tu horario flexible.'
+            },
+            {
+                name: 'Comienza a Aprender',
+                description: 'Conéctate a tus clases en vivo y empieza a hablar tu nuevo idioma desde el primer día.'
+            }
+        ]
+    },
+    testimonials: {
+        title: 'Lo que dicen nuestros estudiantes',
+        subtitle: 'Historias de éxito de nuestra comunidad global.',
+        reviews: [
+            {
+                name: 'Ana García',
+                lang: 'Estudiante de Inglés',
+                quote: '¡TRIANGLAIS transformó mi carrera! Las clases son dinámicas y los profesores, increíbles. Ahora tengo la confianza para liderar reuniones en inglés.'
+            },
+            {
+                name: 'John Smith',
+                lang: 'Estudiante de Español',
+                quote: 'Aprender español aquí fue la mejor decisión para mis viajes por Latinoamérica. El enfoque conversacional es fantástico. ¡Lo recomiendo totalmente!'
+            },
+            {
+                name: 'Chloé Dubois',
+                lang: 'Estudiante de Francés',
+                quote: 'Siempre soñé con aprender francés, y esta academia lo hizo posible. Los horarios flexibles me permitieron aprender a mi propio ritmo. Merci beaucoup!'
+            }
+        ]
+    },
+    ctaBanner: {
+        title: '¿Listo para Hablar un Nuevo Idioma?',
+        subtitle: 'Únete a miles de estudiantes y comienza tu viaje hacia la fluidez hoy mismo.',
+        button: 'Empieza Tu Prueba Gratis'
     },
     about: {
       title: 'Sobre Nosotros',
@@ -179,22 +223,66 @@ export const translations = {
       subtitle: 'From beginner to advanced, we have a course for you.',
       english: {
         title: 'Global English',
-        level: 'All Levels',
-        description: 'Master the international language of business and travel with our engaging English courses.',
+        level: 'Levels A1 - C2',
+        description: 'Master the international language of business and travel. Courses focus on conversation, exam preparation, and more.',
         cta: 'Learn More'
       },
       spanish: {
         title: 'Conversational Spanish',
-        level: 'All Levels',
-        description: 'Immerse yourself in the rich Hispanic culture by learning to speak Spanish with confidence and fluency.',
+        level: 'Levels A1 - C2',
+        description: 'Immerse yourself in the rich Hispanic culture. Learn Spanish for travel, cultural heritage, or to broaden your horizons.',
         cta: 'Learn More'
       },
       french: {
         title: 'Elegant French',
-        level: 'All Levels',
-        description: 'Discover the beauty of French, the language of love, diplomacy, and art, with our expert tutors.',
+        level: 'Levels A1 - C2',
+        description: 'Discover the beauty of French. Courses for diplomacy, art, or simply for the pleasure of learning a beautiful language.',
         cta: 'Learn More'
       }
+    },
+    howItWorks: {
+        title: 'Getting Started is Easy',
+        subtitle: 'Your journey to fluency begins in just three steps.',
+        steps: [
+            {
+                name: 'Sign Up',
+                description: 'Create your account in seconds and tell us about your learning goals.'
+            },
+            {
+                name: 'Book Your Classes',
+                description: 'Choose your ideal tutor and book lessons that fit your flexible schedule.'
+            },
+            {
+                name: 'Start Learning',
+                description: 'Connect to your live classes and start speaking your new language from day one.'
+            }
+        ]
+    },
+    testimonials: {
+        title: 'What Our Students Say',
+        subtitle: 'Success stories from our global community.',
+        reviews: [
+            {
+                name: 'Ana Garcia',
+                lang: 'English Student',
+                quote: 'TRIANGLAIS transformed my career! The classes are dynamic and the teachers are incredible. I now have the confidence to lead meetings in English.'
+            },
+            {
+                name: 'John Smith',
+                lang: 'Spanish Student',
+                quote: 'Learning Spanish here was the best decision for my travels in Latin America. The conversational approach is fantastic. I totally recommend it!'
+            },
+            {
+                name: 'Chloé Dubois',
+                lang: 'French Student',
+                quote: 'I always dreamed of learning French, and this academy made it possible. The flexible schedules allowed me to learn at my own pace. Merci beaucoup!'
+            }
+        ]
+    },
+    ctaBanner: {
+        title: 'Ready to Speak a New Language?',
+        subtitle: 'Join thousands of students and start your journey to fluency today.',
+        button: 'Start Your Free Trial'
     },
     about: {
       title: 'About Us',
@@ -317,22 +405,66 @@ export const translations = {
       subtitle: 'Du débutant à l\'avancé, nous avons un cours pour vous.',
       english: {
         title: 'Anglais Global',
-        level: 'Tous les niveaux',
-        description: 'Maîtrisez la langue internationale des affaires et des voyages avec nos cours d\'anglais captivants.',
+        level: 'Niveaux A1 - C2',
+        description: 'Maîtrisez la langue internationale des affaires et des voyages. Cours axés sur la conversation, la préparation aux examens et plus.',
         cta: 'En Savoir Plus'
       },
       spanish: {
         title: 'Espagnol Conversationnel',
-        level: 'Tous les niveaux',
-        description: 'Plongez dans la riche culture hispanique en apprenant à parler espagnol avec confiance et fluidité.',
+        level: 'Niveaux A1 - C2',
+        description: 'Plongez dans la riche culture hispanique. Apprenez l\'espagnol pour voyager, pour votre héritage culturel ou pour élargir vos horizons.',
         cta: 'En Savoir Plus'
       },
       french: {
         title: 'Français Élégant',
-        level: 'Tous les niveaux',
-        description: 'Découvrez la beauté du français, la langue de l\'amour, de la diplomatie et de l\'art, avec nos tuteurs experts.',
+        level: 'Niveaux A1 - C2',
+        description: 'Découvrez la beauté du français. Cours pour la diplomatie, l\'art ou simplement pour le plaisir d\'apprendre une belle langue.',
         cta: 'En Savoir Plus'
       }
+    },
+    howItWorks: {
+        title: 'C\'est Facile de Commencer',
+        subtitle: 'Votre voyage vers la fluidité commence en seulement trois étapes.',
+        steps: [
+            {
+                name: 'Inscrivez-vous',
+                description: 'Créez votre compte en quelques secondes et parlez-nous de vos objectifs d\'apprentissage.'
+            },
+            {
+                name: 'Réservez vos Cours',
+                description: 'Choisissez votre tuteur idéal et réservez des cours qui correspondent à votre emploi du temps flexible.'
+            },
+            {
+                name: 'Commencez à Apprendre',
+                description: 'Connectez-vous à vos cours en direct et commencez à parler votre nouvelle langue dès le premier jour.'
+            }
+        ]
+    },
+    testimonials: {
+        title: 'Ce que disent nos étudiants',
+        subtitle: 'Histoires de réussite de notre communauté mondiale.',
+        reviews: [
+            {
+                name: 'Ana Garcia',
+                lang: 'Étudiante en Anglais',
+                quote: 'TRIANGLAIS a transformé ma carrière ! Les cours sont dynamiques et les professeurs, incroyables. J\'ai maintenant la confiance nécessaire pour diriger des réunions en anglais.'
+            },
+            {
+                name: 'John Smith',
+                lang: 'Étudiant en Espagnol',
+                quote: 'Apprendre l\'espagnol ici a été la meilleure décision pour mes voyages en Amérique Latine. L\'approche conversationnelle est fantastique. Je le recommande totalement !'
+            },
+            {
+                name: 'Chloé Dubois',
+                lang: 'Étudiante en Français',
+                quote: 'J\'ai toujours rêvé d\'apprendre le français, et cette académie l\'a rendu possible. Les horaires flexibles m\'ont permis d\'apprendre à mon rythme. Merci beaucoup !'
+            }
+        ]
+    },
+    ctaBanner: {
+        title: 'Prêt à Parler une Nouvelle Langue ?',
+        subtitle: 'Rejoignez des milliers d\'étudiants et commencez votre voyage vers la fluidité dès aujourd\'hui.',
+        button: 'Commencez Votre Essai Gratuit'
     },
     about: {
       title: 'À Propos de Nous',
