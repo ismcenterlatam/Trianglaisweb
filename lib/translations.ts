@@ -5,6 +5,9 @@ export const translations = {
       about: 'quienes-somos',
       method: 'metodo',
       contact: 'contacto',
+      notFound: '404',
+      error403: '403',
+      error500: '500'
     },
     nav: {
       home: 'Inicio',
@@ -142,6 +145,24 @@ export const translations = {
             message: 'Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.',
         }
     },
+    notFound: {
+        title: 'Página no encontrada',
+        message: 'La página que buscas no existe o ha sido movida.',
+        redirectText: 'Serás redirigido a la página de inicio en',
+        buttonText: 'Volver al Inicio',
+    },
+    error403: {
+        title: 'Acceso Prohibido',
+        message: 'No tienes permiso para ver esta página. Por favor, contacta al soporte si crees que esto es un error.',
+        redirectText: 'Serás redirigido a la página de inicio en',
+        buttonText: 'Volver al Inicio',
+    },
+    error500: {
+        title: 'Error Interno del Servidor',
+        message: 'Estamos experimentando problemas técnicos. Nuestro equipo ha sido notificado y está trabajando para solucionarlo.',
+        redirectText: 'Serás redirigido a la página de inicio en',
+        buttonText: 'Volver al Inicio',
+    },
     footer: {
       tagline: 'Tu socio global en la educación de idiomas.',
       quickLinks: {
@@ -154,6 +175,8 @@ export const translations = {
         title: 'Legal',
         privacy: 'Política de Privacidad',
         terms: 'Términos de Servicio',
+        simulate403: 'Simular Error 403',
+        simulate500: 'Simular Error 500'
       },
       contact: {
         title: 'Contáctanos',
@@ -178,6 +201,18 @@ export const translations = {
       contact: {
         title: 'Contacto | Habla con la Academia de Idiomas TRIANGLAIS',
         description: '¿Tienes preguntas sobre nuestros cursos de inglés, francés o español? Contacta al equipo de TRIANGLAIS y comienza tu viaje hacia la fluidez hoy mismo.'
+      },
+      notFound: {
+        title: '404 No Encontrado | Página no encontrada en TRIANGLAIS',
+        description: 'La página que buscas no existe. Vuelve a la página principal de la Academia de Idiomas TRIANGLAIS.'
+      },
+      error403: {
+        title: '403 Prohibido | Acceso denegado en TRIANGLAIS',
+        description: 'No tienes permiso para acceder a esta página en la Academia de Idiomas TRIANGLAIS.'
+      },
+      error500: {
+        title: '500 Error del Servidor | Problema técnico en TRIANGLAIS',
+        description: 'Estamos experimentando problemas técnicos en la Academia de Idiomas TRIANGLAIS. Estamos trabajando para solucionarlo.'
       }
     }
   },
@@ -187,6 +222,9 @@ export const translations = {
       about: 'en/about-us',
       method: 'en/method',
       contact: 'en/contact',
+      notFound: 'en/404',
+      error403: 'en/403',
+      error500: 'en/500'
     },
     nav: {
       home: 'Home',
@@ -324,6 +362,24 @@ export const translations = {
             message: 'We have received your message and will get back to you shortly.',
         }
     },
+    notFound: {
+        title: 'Page Not Found',
+        message: 'The page you are looking for does not exist or has been moved.',
+        redirectText: 'You will be redirected to the homepage in',
+        buttonText: 'Back to Home',
+    },
+    error403: {
+        title: 'Access Forbidden',
+        message: 'You do not have permission to view this page. Please contact support if you believe this is an error.',
+        redirectText: 'You will be redirected to the homepage in',
+        buttonText: 'Back to Home',
+    },
+    error500: {
+        title: 'Internal Server Error',
+        message: 'We are experiencing technical difficulties. Our team has been notified and is working on a fix.',
+        redirectText: 'You will be redirected to the homepage in',
+        buttonText: 'Back to Home',
+    },
     footer: {
       tagline: 'Your global partner in language education.',
       quickLinks: {
@@ -336,6 +392,8 @@ export const translations = {
         title: 'Legal',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
+        simulate403: 'Simulate Error 403',
+        simulate500: 'Simulate Error 500'
       },
       contact: {
         title: 'Contact Us',
@@ -360,6 +418,18 @@ export const translations = {
       contact: {
         title: 'Contact | Speak with TRIANGLAIS Language Academy',
         description: 'Have questions about our English, French, or Spanish courses? Contact the TRIANGLAIS team and start your journey to fluency today.'
+      },
+      notFound: {
+        title: '404 Not Found | Page not found at TRIANGLAIS',
+        description: 'The page you are looking for does not exist. Return to the main page of TRIANGLAIS Language Academy.'
+      },
+      error403: {
+        title: '403 Forbidden | Access denied at TRIANGLAIS',
+        description: 'You do not have permission to access this page at TRIANGLAIS Language Academy.'
+      },
+      error500: {
+        title: '500 Server Error | Technical issue at TRIANGLAIS',
+        description: 'We are experiencing technical issues at TRIANGLAIS Language Academy. We are working to resolve it.'
       }
     }
   },
@@ -369,6 +439,9 @@ export const translations = {
       about: 'fr/a-propos',
       method: 'fr/methode',
       contact: 'fr/contact',
+      notFound: 'fr/404',
+      error403: 'fr/403',
+      error500: 'fr/500'
     },
     nav: {
       home: 'Accueil',
@@ -506,6 +579,24 @@ export const translations = {
             message: 'Nous avons bien reçu votre message et nous vous recontacterons bientôt.',
         }
     },
+    notFound: {
+        title: 'Page non trouvée',
+        message: 'La page que vous recherchez n\'existe pas ou a été déplacée.',
+        redirectText: 'Vous serez redirigé vers la page d\'accueil dans',
+        buttonText: 'Retour à l\'accueil',
+    },
+    error403: {
+        title: 'Accès Interdit',
+        message: 'Vous n\'avez pas la permission de voir cette page. Veuillez contacter le support si vous pensez que c\'est une erreur.',
+        redirectText: 'Vous serez redirigé vers la page d\'accueil dans',
+        buttonText: 'Retour à l\'accueil',
+    },
+    error500: {
+        title: 'Erreur Interne du Serveur',
+        message: 'Nous rencontrons des problèmes techniques. Notre équipe a été notifiée et travaille à la résolution du problème.',
+        redirectText: 'Vous serez redirigé vers la page d\'accueil dans',
+        buttonText: 'Retour à l\'accueil',
+    },
     footer: {
       tagline: 'Votre partenaire mondial en éducation linguistique.',
       quickLinks: {
@@ -518,6 +609,8 @@ export const translations = {
         title: 'Légal',
         privacy: 'Politique de Confidentialité',
         terms: 'Conditions d\'Utilisation',
+        simulate403: 'Simuler l\'Erreur 403',
+        simulate500: 'Simuler l\'Erreur 500'
       },
       contact: {
         title: 'Nous Contacter',
@@ -542,6 +635,18 @@ export const translations = {
       contact: {
         title: 'Contact | Parlez avec l\'Académie de Langues TRIANGLAIS',
         description: 'Vous avez des questions sur nos cours d\'anglais, de français ou d\'espagnol ? Contactez l\'équipe de TRIANGLAIS et commencez votre voyage vers la fluidité dès aujourd\'hui.'
+      },
+      notFound: {
+        title: '404 Non trouvé | Page non trouvée sur TRIANGLAIS',
+        description: 'La page que vous recherchez n\'existe pas. Retournez à la page principale de l\'Académie de Langues TRIANGLAIS.'
+      },
+      error403: {
+        title: '403 Interdit | Accès refusé sur TRIANGLAIS',
+        description: 'Vous n\'êtes pas autorisé à accéder à cette page sur l\'Académie de Langues TRIANGLAIS.'
+      },
+      error500: {
+        title: '500 Erreur Serveur | Problème technique sur TRIANGLAIS',
+        description: 'Nous rencontrons des problèmes techniques sur l\'Académie de Langues TRIANGLAIS. Nous travaillons à sa résolution.'
       }
     }
   },

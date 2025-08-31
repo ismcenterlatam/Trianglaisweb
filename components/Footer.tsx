@@ -44,6 +44,8 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
             <ul className="space-y-2">
               <li><a href="#" className="hover:text-brand-accent cursor-pointer">{t.footer.legal.privacy}</a></li>
               <li><a href="#" className="hover:text-brand-accent cursor-pointer">{t.footer.legal.terms}</a></li>
+              <li><button onClick={() => navigate('error403')} className="hover:text-brand-accent">{t.footer.legal.simulate403}</button></li>
+              <li><button onClick={() => navigate('error500')} className="hover:text-brand-accent">{t.footer.legal.simulate500}</button></li>
             </ul>
           </div>
 
